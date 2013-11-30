@@ -16,7 +16,7 @@
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
 
-    <js-module src="www/backgroundservice" name="BackgroundService">
+    <js-module src="www/backgroundservice.js" name="BackgroundService">
         <!-- <clobbers target="window.plugins.socialsharing" /> -->
     </js-module>
 
