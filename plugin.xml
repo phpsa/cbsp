@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.red-folder.phonegap.plugin.backgroundservice"
+        version="3.3">
+
+    <name>Background Services</name>
+
+    <description>
+        A plugin (and framework code) that allows the development and operation of an Android Background Service.
+    </description>
+
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <js-module src="www/backgroundservice" name="BackgroundService">
+        <!-- <clobbers target="window.plugins.socialsharing" /> -->
+    </js-module>
+
+    
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BackgroundServicePlugin">
+                <param name="android-package" value="com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePlugin"/>
+            </feature>
+    
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            
+            <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+            <!-- To be added within Application nde -->
+            <service android:name="com.red_folder.phonegap.plugin.backgroundservice.MyService">
+                <intent-filter>         
+                    <action android:name="com.red_folder.phonegap.plugin.backgroundservice.MyService"/> 
+                </intent-filter>     
+            </service>
+
+            <receiver android:name="com.red_folder.phonegap.plugin.backgroundservice.BootReceiver">
+                <intent-filter>     
+                    <action android:name="android.intent.action.BOOT_COMPLETED"></action>   
+                </intent-filter> 
+            </receiver>
+            
+        </config-file>
+
+        
+        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/BackgroundService.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/BackgroundService.java"/>
+        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/BackgroundServicePlugin.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/BackgroundServicePlugin.java"/>
+        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/BackgroundServicePluginLogic.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/BackgroundServicePluginLogic.java"/>
+        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/BootReceiver.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/BootReceiver.java"/>
+        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/MyService.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/MyService.java"/>
+        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/PropertyHelper.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/PropertyHelper.java"/>
+    </platform>
+
+</plugin>
