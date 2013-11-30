@@ -220,6 +220,6 @@
 						[this.getServiceName()]);
 	};
 
-	var backgroundService = new BackgroundService(serviceName);
+	var backgroundService = new BackgroundService('com.red-folder.phonegap.plugin.backgroundservice.MyService');
 	module.exports = backgroundService;
 /*}; */
