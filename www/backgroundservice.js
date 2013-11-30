@@ -236,6 +236,8 @@ bgService.install = function () {
 
   window.plugins.bgService = new bgService();
   return window.plugins.bgService;
+  
+  bgService.CreateBackgroundService('com.red_folder.phonegap.plugin.backgroundservice.MyService', require, exports, module);
 };
 /*
 cordova.define(	'cordova/plugin/myService',	function(require, exports, module) {    

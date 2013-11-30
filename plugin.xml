@@ -17,7 +17,9 @@
     </engines>
 
     <js-module src="www/backgroundservice.js" name="BackgroundService">
+        <clobbers target="window.plugins.bgService" />
     </js-module>
+    
 
     
     <!-- android -->
