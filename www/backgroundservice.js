@@ -17,13 +17,8 @@
 /*
  * Constructor
  */
-
-function bgService() {
-    
-}
-
-bgService.prototype.CreateBackgroundService = function(serviceName, require, exports, module) {
-	var exec = require("cordova/exec");
+/*function CreateBackgroundService(serviceName, require, exports, module) {
+	var exec = require("cordova/exec");*/
 	
 	var BackgroundService = function (serviceName) {
 		var ServiceName = serviceName
@@ -227,19 +222,4 @@ bgService.prototype.CreateBackgroundService = function(serviceName, require, exp
 
 	var backgroundService = new BackgroundService(serviceName);
 	module.exports = backgroundService;
-}; 
-
-bgService.install = function () {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
-
-  window.plugins.bgService = new bgService();
-  return window.plugins.bgService;
-  
-  bgService.CreateBackgroundService('com.red_folder.phonegap.plugin.backgroundservice.MyService', require, exports, module);
-};
-/*
-cordova.define(	'cordova/plugin/myService',	function(require, exports, module) {    
-												CreateBackgroundService('com.yournamespace.yourappname.MyService', require, exports, module);
-											});*/
+/*}; */
