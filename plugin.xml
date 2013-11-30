@@ -33,7 +33,10 @@
         <config-file target="AndroidManifest.xml" parent="/manifest">
             
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+  
             <service android:name="com.red_folder.phonegap.plugin.backgroundservice.MyService">
                 <intent-filter>         
                     <action android:name="com.red_folder.phonegap.plugin.backgroundservice.MyService"/> 
