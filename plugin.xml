@@ -17,7 +17,6 @@
     </engines>
 
     <js-module src="www/backgroundservice.js" name="BackgroundService">
-        <!-- <clobbers target="window.plugins.socialsharing" /> -->
     </js-module>
 
     
@@ -35,7 +34,6 @@
             
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-            <!-- To be added within Application nde -->
             <service android:name="com.red_folder.phonegap.plugin.backgroundservice.MyService">
                 <intent-filter>         
                     <action android:name="com.red_folder.phonegap.plugin.backgroundservice.MyService"/> 
