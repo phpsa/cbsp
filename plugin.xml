@@ -22,6 +22,7 @@
     
 
     
+       
     <!-- android -->
     <platform name="android">
 
@@ -52,17 +53,9 @@
             </receiver>
             
         </config-file>
-
         
-     <!--   <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/BackgroundService.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/BackgroundService.java"/>
-        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/BackgroundServicePlugin.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/BackgroundServicePlugin.java"/>
-        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/BackgroundServicePluginLogic.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/BackgroundServicePluginLogic.java"/>
-        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/BootReceiver.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/BootReceiver.java"/>
-        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/PropertyHelper.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/PropertyHelper.java"/> -->
-        
-        
-        <source-file src="src/android/com/red_folder/phonegap/plugin/backgroundservice/MyService.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/"/>
-        <source-file src="src/android/libs/backgroundserviceplugin-3.1.0.jar" target-dir="libs/"/>
+        <source-file src="src/android/MyService.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice" />
+        <source-file src="src/android/backgroundserviceplugin-3.1.0.jar" target-dir="libs"/>
     </platform>
 
 </plugin>
