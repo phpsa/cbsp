@@ -1,4 +1,3 @@
-//package com.yournamespace.yourappname;
 package com.red_folder.phonegap.plugin.backgroundservice;
 
 import java.text.SimpleDateFormat;
