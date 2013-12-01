@@ -20,7 +20,7 @@
 /*function CreateBackgroundService(serviceName, require, exports, module) {
 	var exec = require("cordova/exec");*/
 
-var exec = require("cordova/exec")
+var exec = require("cordova/exec");
 	
 	var BackgroundService = function (serviceName) {
 		var ServiceName = serviceName
